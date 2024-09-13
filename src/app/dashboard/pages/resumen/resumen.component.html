@@ -1,0 +1,45 @@
+<div class="container d-flex justify-content-center align-items-center pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="p-4 border rounded formulario">
+                <span class="pb-5" style="font-size: 20px;">Información Básica</span>
+                <table class="table table-bordered mt-4 formulario">
+                    <tbody>
+                        <tr>
+                            <th >Primer Nombre</th>
+                            <td>{{ constumer?.firstName }}</td>
+                        </tr>
+                        <tr>
+                            <th >Segundo Nombre</th>
+                            <td>{{ constumer?.middleName }}</td>
+                        </tr>
+                        <tr>
+                            <th >Primer Apellido</th>
+                            <td>{{ constumer?.firstSurname }}</td>
+                        </tr>
+                        <tr>
+                            <th >Segundo Apellido</th>
+                            <td>{{ constumer?.secondLastName }}</td>
+                        </tr>
+                        <tr>
+                            <th >Dirección</th>
+                            <td>{{ constumer?.address }}</td>
+                        </tr>
+                        <tr>
+                            <th >Ciudad</th>
+                            <td>{{ constumer?.city }}</td>
+                        </tr>
+                        <tr>
+                            <th >Teléfono</th>
+                            <td>{{ constumer?.phone }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary button w-100" (click)="onclick()"> volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+F

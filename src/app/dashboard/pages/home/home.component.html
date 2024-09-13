@@ -1,0 +1,32 @@
+@if (!constumerActive) {
+<div class="container d-flex justify-content-center align-items-center  pt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-4 border rounded formulario">
+                <span class="pb-5 title">Todos los campos son obligatorios</span>
+                <div class="mb-3">
+                    <label for="typeDocument" class="form-label">Tipo Documento</label>
+                    <select id="typeDocument" formControlName="typeDocument" class="form-select" required>
+                        <option value="" disabled selected>Seleccione Tipo de Documento</option>
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="TI">Tarjeta de Identidad</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        <option value="RC">Registro Civil de Nacimiento</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="documentNumber" class="form-label">Número Documento</label>
+                    <input id="documentNumber" formControlName="documentNumber" class="form-control" type="text"
+                        (input)="formatDocumentNumber()" maxlength="14" required>
+
+                </div>
+                <button type="submit" class="btn btn-primary button w-100" [disabled]="!form.valid">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>}
+@if (constumer && constumerActive) {
+<app-resumen [constumer]="constumer"[(constumerActive)]="constumerActive"></app-resumen>
+
+}

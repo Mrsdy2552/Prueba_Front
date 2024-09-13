@@ -1,0 +1,19 @@
+.button{
+    background-color: #002c76 !important;
+    border-radius: 20px;
+}:disabled {
+    background-color: #eaeef2 !important;
+    color:#c1c4c7;
+    border-color: #c1c4c7;
+    
+}
+
+.formulario{
+    background-color: #f7fbff;
+    color: #6e88b3;
+}
+
+.title {
+    font-size: 12px;
+    color: #dadcdf;
+}
